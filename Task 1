@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Treats</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: #fff0f5;
+      color: #444;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #ffb6c1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 700;
+      color: hotpink;
+    }
+
+    header .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: hotpink;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: white;
+      color: hotpink;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    section {
+      padding: 100px 60px;
+      min-height: 100vh;
+    }
+
+    #home {
+      background: linear-gradient(to bottom, #ffe4e1, #fff0f5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 50px;
+      color: hotpink;
+      margin-bottom: 20px;
+    }
+
+    #about {
+      background: #fffaf0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #about .icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #about .icons img {
+      width: 120px;
+      transition: transform 0.3s;
+    }
+
+    #about .icons img:hover {
+      transform: scale(1.1);
+    }
+
+    #menu {
+      background: #f0fff0;
+    }
+
+    #contact {
+      background: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: hotpink;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    .menu-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .menu-item {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 20px);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-item img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 2px solid hotpink;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    form button {
+      background: hotpink;
+      color: white;
+      font-size: 18px;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: deeppink;
+    }
+
+    /* Floating emoji animations */
+    .floating-emoji {
+      position: absolute;
+      font-size: 35px;
+      opacity: 0.8;
+      animation: floatY 4s infinite ease-in-out alternate,
+                 floatX 7s infinite linear alternate;
+    }
+
+    @keyframes floatY {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-60px); }
+    }
+
+    @keyframes floatX {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(50px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="C:\Skill craft\cotton-candy.png" alt="logo">
+      Sweet Treats
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to Sweet Treats 🍩🍭</h1>
+    <p>Indulge in the cutest cupcakes, donuts, and desserts made with love and sprinkles!</p>
+      <div class="floating-emoji home-emoji" style="left:10%; top:30%; font-size:70px;">🧁</div>
+     <div class="floating-emoji home-emoji" style="left:80%; top:20%; font-size:65px;">🍩</div>
+     <div class="floating-emoji home-emoji" style="left:20%; top:70%; font-size:75px;">🍦</div>
+     <div class="floating-emoji home-emoji" style="left:60%; top:60%; font-size:80px;">🎂</div>
+     <div class="floating-emoji home-emoji" style="left:40%; top:15%; font-size:70px;">🍪</div>
+  </section>
+  
+  <section id="about">
+    <h2>About Us 💕</h2>
+    <p>At Sweet Treats, we believe every bite should bring joy. Our desserts are freshly baked daily with the finest ingredients. Whether it’s a cupcake for one or a cake for your special day, we’ve got something sweet for everyone!</p>
+    <div class="icons">
+      <img src="C:\Skill craft\cupcake.png"alt="Cupcake">
+      <img src="C:\Skill craft\Donut.png" alt="Donut">
+      <img src="C:\Skill craft\ice-cream.png" alt="Ice Cream">
+      <img src="C:\Skill craft\cake-slice.png"alt="Cake">
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu 🍪</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="C:\Skill craft\cupcake1.png" alt="Cupcake">
+        <h3>Cupcakes</h3>
+        <p>Fluffy, creamy, and oh-so-sweet!</p>
+      </div>
+      <div class="menu-item">
+        <img src="C:\Skill craft\Donut.png" alt="Donut">
+        <h3>Donuts</h3>
+        <p>Classic, glazed, or sprinkled with love.</p>
+      </div>
+      <div class="menu-item">
+        <img src="C:\Skill craft\ice-cream.png" alt="Ice Cream">
+        <h3>Ice Cream</h3>
+        <p>Scoops of happiness in every flavor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <!-- More floating emojis -->
+    <div class="floating-emoji" style="left:5%; top:20%;">🍩</div>
+    <div class="floating-emoji" style="left:80%; top:30%;">🧁</div>
+    <div class="floating-emoji" style="left:20%; top:70%;">🍦</div>
+    <div class="floating-emoji" style="left:70%; top:60%;">✨</div>
+    <div class="floating-emoji" style="left:40%; top:15%;">🍭</div>
+    <div class="floating-emoji" style="left:60%; top:80%;">🎂</div>
+    <div class="floating-emoji" style="left:10%; top:50%;">💕</div>
+    <div class="floating-emoji" style="left:85%; top:75%;">🍪</div>
+
+    <h2>Contact Us 📩</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
